@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Message</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: #0b1020;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Moon */
+.moon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 42px;
+    animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 5px white; }
+    to { text-shadow: 0 0 20px white; }
+}
+
+/* Stars */
+.star {
+    position: absolute;
+    color: white;
+    font-size: 10px;
+    animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+    from { opacity: 0.3; }
+    to { opacity: 1; }
+}
+
+/* Floating flowers & hearts */
+.float {
+    position: absolute;
+    bottom: -40px;
+    font-size: 24px;
+    animation: floatRandom 12s linear infinite;
+}
+
+@keyframes floatRandom {
+    0%   { transform: translateX(0) translateY(0); opacity: 0; }
+    20%  { transform: translateX(20px) translateY(-20vh); }
+    40%  { transform: translateX(-15px) translateY(-40vh); }
+    60%  { transform: translateX(25px) translateY(-60vh); }
+    80%  { transform: translateX(-10px) translateY(-80vh); }
+    100% { transform: translateX(15px) translateY(-120vh); opacity: 1; }
+}
+
+/* Message Card */
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    width: 90%;
+    max-width: 360px;
+    padding: 25px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(255,255,255,0.7);
+    animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translate(-50%, -40%); }
+    to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+h1 { color: #444; }
+p { color: #555; line-height: 1.6; }
+.signature { margin-top: 15px; color: #777; }
+</style>
+</head>
+
+<body>
+
+<!-- Moon -->
+<div class="moon">🌙</div>
+
+<!-- Stars -->
+<div class="star" style="top:10%; left:20%;">✦</div>
+<div class="star" style="top:25%; left:70%;">✧</div>
+<div class="star" style="top:40%; left:50%;">✦</div>
+<div class="star" style="top:15%; left:85%;">✧</div>
+<div class="star" style="top:60%; left:15%;">✦</div>
+
+<!-- Floating flowers & hearts -->
+<div class="float" style="left:10%;">🌸</div>
+<div class="float" style="left:30%; animation-delay:2s;">💗</div>
+<div class="float" style="left:50%; animation-delay:4s;">🌼</div>
+<div class="float" style="left:70%; animation-delay:1s;">💖</div>
+<div class="float" style="left:85%; animation-delay:3s;">🌷</div>
+
+<!-- Message -->
+<div class="card">
+    <h1>💌 A Small Message</h1>
+    <p>
+        I like talking with you and spending time with you.<br><br>
+        I just wanted to share this honestly and respectfully.<br><br>
+        No pressure at all — your comfort matters most.
+    </p>
+    <div class="signature">— From me</div>
+</div>
+
+</body>
+</html>
